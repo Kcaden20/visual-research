@@ -3,6 +3,11 @@ body {
     padding-top: 80px; /* Add space for fixed nav */
 }
 
+/* Ensure anchor links don't hide content behind fixed header */
+html {
+    scroll-padding-top: 100px;
+}
+
 /* Fixed Navigation */
 header {
     position: fixed;
@@ -126,7 +131,7 @@ ol {
 
 hr{
     border-top: 5px solid #8f563b;
-    margin: 6rem auto;
+    margin: 10rem auto;
 }         
 
 /* Diagrams Grid - Two Column Layout */
@@ -160,8 +165,8 @@ hr{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     align-items: center;
     padding: 0 5rem;
 }
@@ -171,8 +176,8 @@ hr{
 }
 
 .image-column img {
-    max-width: 80%;
-    max-height: 40vh;
+    max-width: 90%;
+    max-height: 45vh;
     height: auto;
     border-radius: 10px;
 }
@@ -216,7 +221,7 @@ hr{
 .image-links a {
         margin-right: 1em;
         padding: .5em;
-        line-height: 2em;
+        line-height: 1em;
         font-size: 1.75rem;
         color: black;
         background-color: white;
@@ -247,6 +252,10 @@ img.map {
     width: auto;
 }
 
+#diagrams .image-item img {
+    max-height: 90vh;
+}
+
 .m0 {
     margin: 0;
 }
@@ -255,12 +264,13 @@ footer p {
     text-align:center;
 }
 /* Responsive design for two column layout */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .image-item-two-column {
         grid-template-columns: 1fr;
         gap: 1rem;
         padding: 0;
         margin-top: 2rem;
+        margin-bottom: 2rem;
     }
     
     #map {
@@ -272,12 +282,7 @@ footer p {
     }
 
 
-    
-    /* Mobile header and navigation */
-    header {
-        border-bottom: 3px solid #8f563b;
-        display: none;
-    }
+
     
     nav {
         padding: 0.5rem 1rem;
@@ -298,7 +303,7 @@ footer p {
     nav ul li a {
         padding: 0.2rem 0.4rem;
         display: block;
-        font-size: 1.2rem;
+        font-size: 1.75rem;
     }
     
     /* Adjust body padding for smaller mobile header */
@@ -331,5 +336,24 @@ footer p {
     .image-links a {
         font-size: 1.5rem;
     }
+
+    hr{
+    margin: 6rem auto;
+}    
+
+#diagrams .image-item img {
+    max-width: 100%;
+    max-height: 100vh;
+}
+}
+
+@media (max-width: 600px) { 
+
+        /* Mobile header and navigation */
+    header {
+        border-bottom: 3px solid #8f563b;
+        display: none;
+    }
+
 }
 
