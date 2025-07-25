@@ -276,6 +276,9 @@ footer p {
         margin-bottom: 2rem;
     }
     
+    #about {
+        padding-top:4em;
+    }
     #map {
         grid-template-columns: 1fr;
     }
@@ -284,6 +287,9 @@ footer p {
         max-width: 100%;
     }
 
+    .text-column h4 {
+        margin-top: 0;
+    }
 
 
     
@@ -356,6 +362,10 @@ footer p {
     header {
         border-bottom: 3px solid #8f563b;
         display: none;
+    }
+
+     #about {
+        padding-top: 2em;
     }
 
 }
